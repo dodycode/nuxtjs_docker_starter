@@ -1,0 +1,19 @@
+version: '2'
+services:
+  my_app:
+    build: 
+      context: .
+      dockerfile: ./dockerfiles/dockerfile.dev
+      # production mode
+      # dockerfile: ./dockerfiles/dockerfile
+    ports:
+      - 80:3000
+    environment:
+      - HOST=0.0.0.0
+    volumes:
+      - './my_app:/usr/src/nuxt-app/'
+      - node_modules:/usr/src/nuxt-app/node_modules
+      - nuxt:/usr/src/nuxt-app/.nuxt
+volumes:
+  node_modules:
+  nuxt:
