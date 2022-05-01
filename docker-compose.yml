@@ -10,8 +10,8 @@ services:
       - HOST=0.0.0.0
     volumes:
       - './my_app:/usr/src/nuxt-app/'
-      - node_modules_v5:/usr/src/nuxt-app/node_modules
-      - nuxt_core_v5:/usr/src/nuxt-app/.nuxt
+      - node_modules:/usr/src/nuxt-app/node_modules
+      - nuxt_core:/usr/src/nuxt-app/.nuxt
 volumes:
-  node_modules_v5:
-  nuxt_core_v5:
+  node_modules:
+  nuxt_core:
